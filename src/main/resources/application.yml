@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/weather_forecast_db?currentSchema=public
+    username: postgres
+    password: ENC(mTZeRkFnIM+ttfKNKWYw9cTXqLcsXG2GsdyiAFxgWR3AY2QmgMPBxXO1e7Uj14rQ)
+  jackson:
+    default-property-inclusion: non_empty
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+springdoc.api-docs:
+  path: /api/docs
+  resolve-schema-properties: true
+
+open.weather:
+  base.url: https://api.openweathermap.org/data/2.5/forecast
+  api-key: ENC(EQiBl8cvu6xxyAmyOlCEcNUmCgABiC1VVXjJLlgmktAY4iJub/wpCXJP0xdS2ZLedf/xem+wbaSPNY1sPvTYDbHGmzogwb7RFjizoECODL4=)
+  units: metric
